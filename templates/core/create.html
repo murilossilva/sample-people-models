@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Inserir Pessoa</title>
+{% endblock %}
+
+{% block content %}
+    <form action='/peoples/create/' method="post">
+      {% csrf_token %}
+      <p>
+        {{ form.as_p }}
+        <input type='submit' value='Confirmar'>
+      </p>  
+    </form>
+{% endblock %}
